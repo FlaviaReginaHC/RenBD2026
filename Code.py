@@ -48,22 +48,3 @@ st.markdown("""
 if st.button("Clique aqui para uma surpresa!"):
     st.balloons()
     st.success("Que o seu ano seja incrível! ✨")
-
-# Seção interativa de recados
-st.write("---")
-st.subheader("Deixe uma mensagem para o aniversariante:")
-
-with st.form("form_recado"):
-    remetente = st.text_input("Seu nome:")
-    texto_recado = st.text_area("Escreva sua mensagem:")
-    enviado = st.form_submit_button("Enviar Recado")
-
-if enviado:
-    if remetente and texto_recado:
-        st.success(f"Mensagem enviada com sucesso por {remetente}! 💌")
-        # Aqui você poderia salvar a mensagem em um banco de dados ou arquivo de texto
-        with st.expander("Ver recado enviado"):
-            st.write(f"**De:** {remetente}")
-            st.write(f"**Mensagem:** {texto_recado}")
-    else:
-        st.warning("Por favor, preencha o seu nome e a mensagem!")
