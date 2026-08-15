@@ -2,10 +2,8 @@ import streamlit as st
 import datetime
 from PIL import Image
 
-# Configuração da página
 st.set_page_config(page_title="Feliz Aniversário!", page_icon="🎂", layout="centered")
 
-# Estilização básica com CSS
 st.markdown("""
     <style>
         .titulo {
@@ -35,16 +33,14 @@ st.markdown("""
 # Cabeçalho
 st.markdown("<h1 class='titulo'>🎉 Parabéns! 🎂</h1>", unsafe_allow_html=True)
 
-# Mensagem principal
 st.markdown("""
     <div class='mensagem'>
-        Hoje é um dia super especial! Desejo que seu aniversário seja repleto de sorrisos, 
+        Desejo que seu aniversário seja repleto de sorrisos, 
         abraços e muitas comemorações. Que este novo ciclo venha acompanhado de muita paz, 
-        saúde e realizações. Aproveite o seu dia! 💖
+        saúde e realizações. Aproveite o seu dia! 
     </div>
 """, unsafe_allow_html=True)
 
-# Efeito de confetes (ocorre quando o botão é clicado)
 if st.button("Clique aqui para uma surpresa!"):
     st.balloons()
     st.success("Que o seu ano seja incrível! ✨")
